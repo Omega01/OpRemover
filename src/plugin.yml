@@ -1,0 +1,5 @@
+name: OpRemover
+version: 1.0
+main: me.OmegaByte.OpRemover.Main
+author: OmegaByte
+description: Removes operator status from operator's after leaving the server. (For Security)
