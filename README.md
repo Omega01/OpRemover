@@ -15,6 +15,6 @@ This plugin is made to keep Minecraft servers more secure. There is always the p
 
 * Open the plugin folder
 * Open the config.yml
-* Edit the - PlayerName and change it for the Op Players you want to remove the Op after leaving the server.
-* Go to the game and run the command /opremover reload to reload the config.yml file
+* Edit the _PlayerName_ and change it for the Op Players you want to remove the Op after leaving the server.
+* Go to the game and run the command _/opremover reload_ to reload the config.yml file
 * Done!
