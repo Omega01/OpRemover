@@ -29,7 +29,7 @@ public class Reload implements CommandExecutor {
             return true;
         }
         if (args.length >= 1) {
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cUse: /opremover reload"));
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', this.plugin.getConfig().getString("CommandUse")));
         }
         return true;
     }
