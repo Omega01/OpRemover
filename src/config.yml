@@ -1,0 +1,45 @@
+##    00000    000000000      00000000  000000000  0000      0000    00000    00      00  000000000  00000000
+##  00     00  00     00      00    00  00         00  00  00  00  00     00  00      00  00         00    00
+##  00     00  000000000      00000000  00000      00    00    00  00     00    00  00    00000      00000000
+##  00     00  00             00 000    00         00          00  00     00    00  00    00         00 000
+##    00000    00             00  0000  000000000  00          00    00000        00      000000000  00  0000
+
+#List of players with operator status which the plugin is gonna remove the operator status after leaving.
+#Add your names in this list
+#Example: - OmegaByte
+OpPlayerList:
+  - PlayerName
+
+#---------------------------------------------------#
+# Enable LogToConsole if you want a message in the
+# console when a player in the OpPlayerList leaves
+# the server and his Op status is removed.
+#---------------------------------------------------#
+LogToConsole: true
+ConsoleLog: '&bServer&8: &aOperator status has been removed from %p after leaving the server.'
+ReloadMsg: '&8[&cOpRemover&8] &aConfiguration reloaded!'
+NoPermission: '&cYou do not have permissions to execute this command.'
+CommandUse: '&cUse: /opremover <reload | rl>'
+UseGamemode: false
+#Gamemodes: SURVIVAL, CREATIVE, SPECTATOR, ADVENTURE
+Gamemode: 'SURVIVAL'
+
+#If you want to be able to execute this command, you need to be on the OpPlayerList.
+#OpRecovery Section
+
+#Enable this if you want to use /oprecovery
+UsePassword: false
+OptionDisabled: '&cThis option is disabled. Go to the config.yml file and enable it if you want to use it.'
+AlreadyOp: '&cYou are already Op.'
+RecoveryPassword: 'example1234'
+PasswordUse: '&cUse: /oprecovery <password>'
+OpRecovered: '&aYou have recovered Op status!'
+IncorrectPassword: '&cIncorrect password!'
+#---------------------------------------------------#
+# Enable LogRecovered if you want a message in the
+# console when a player in the OpPlayerList recovers
+# Op status after using /oprecovery <password>
+#---------------------------------------------------#
+LogRecovered: false
+#The message for LogRecovered (This message will show in console)
+RecoveredLog: '&bServer&8: &a%p has recovered Op status.'

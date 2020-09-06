@@ -1,0 +1,13 @@
+name: OpRemover
+version: 1.3
+main: me.Omega01.OpRemover.Main
+author: Omega01
+description: Removes operator status from operator's after leaving the server. (For Security)
+
+commands:
+  opremover:
+    description: Main command.
+    usage: /<command>
+  oprecovery:
+    description: Password to recover op status.
+    usage: /<command>
