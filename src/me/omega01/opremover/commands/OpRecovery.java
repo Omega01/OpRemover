@@ -41,12 +41,12 @@ public class OpRecovery implements CommandExecutor {
                         return true;
                     }
                     if (args.length == 1) {
-                        if (!args[0].equalsIgnoreCase((plugin.getConfig().getString("RecoveryPassword")))) {
+                        if (!args[0].equals((plugin.getConfig().getString("RecoveryPassword")))) {
                             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("IncorrectPassword")));
                         } else {
                             sender.setOp(true);
                             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("OpRecovered")));
-                            Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("RecoveredLog").replace("%p", sender.getName())));
+                            System.out.println(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("RecoveredLog").replace("%p", sender.getName())));
                         }
                     }
                 }

@@ -1,6 +1,6 @@
 name: OpRemover
 version: 1.3
-main: me.Omega01.OpRemover.Main
+main: me.omega01.opremover.Main
 author: Omega01
 description: Removes operator status from operator's after leaving the server. (For Security)
 
