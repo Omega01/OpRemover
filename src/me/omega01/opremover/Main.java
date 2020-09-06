@@ -31,7 +31,7 @@ public class Main extends JavaPlugin implements Listener {
     }
 
     public void onDisable() {
-        Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "&8[&c" + getDescription().getName() + "&8] &aHas been enabled (Version v" + getDescription().getVersion() + ")"));
+        Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "&8[&c" + getDescription().getName() + "&8] &aHas been disabled (Version v" + getDescription().getVersion() + ")"));
         Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "&cMade by Omega01"));
     }
 
