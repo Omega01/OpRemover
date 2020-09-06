@@ -19,4 +19,4 @@ This plugin is made to keep Minecraft servers more secure. There is always the p
 * Go to the game and run the command _/opremover reload_ to reload the config.yml file
 * Done!
 
-* There's also other options like _/oprecovery <password>_ which is made to recover operator status, or in the config gamemode change on quit.
+* There's also other options like _/oprecovery password_ which is made to recover operator status, or in the config gamemode change on quit.
