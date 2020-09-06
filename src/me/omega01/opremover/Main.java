@@ -23,8 +23,8 @@ public class Main extends JavaPlugin implements Listener {
     public void onEnable() {
         this.opRecovery = new OpRecovery(this);
         this.reload = new Reload(this);
-        int pluginId = 8395;
-        MetricsLite metrics = new MetricsLite(this, pluginId);
+        int pluginId = 8395; // Metrics
+        MetricsLite metrics = new MetricsLite(this, pluginId); // Metrics
         Bukkit.getPluginManager().registerEvents(this, this);
         getLogger().info("Has been enabled (Version v" + getDescription().getVersion() + ")");
         getLogger().info("Made by Omega01");
@@ -40,14 +40,14 @@ public class Main extends JavaPlugin implements Listener {
     @EventHandler
     public void onQuit(PlayerQuitEvent e) {
         Player p = e.getPlayer();
-        List<String> OpPlayers = getConfig().getStringList("OpPlayerList");
-        if (p.isOp() && OpPlayers.contains(p.getName())) {
-            p.setOp(false);
-            if (getConfig().getBoolean("UseGamemode")) {
-                p.setGameMode(GameMode.valueOf(getConfig().getString("Gamemode")));
+        List<String> OpPlayers = getConfig().getStringList("OpPlayerList"); // Config String List
+        if (p.isOp() && OpPlayers.contains(p.getName())) { // If the player is in the Config String List
+            p.setOp(false); // Remove his Op Status when he leaves the server
+            if (getConfig().getBoolean("UseGamemode")) { // And if the option UseGamemode is enabled in the config
+                p.setGameMode(GameMode.valueOf(getConfig().getString("Gamemode"))); // Change his gamemode when he leaves
             }
-            if (getConfig().getBoolean("LogToConsole")) {
-                System.out.println(ChatColor.translateAlternateColorCodes('&', getConfig().getString("ConsoleLog").replace("%p", p.getName())));
+            if (getConfig().getBoolean("LogToConsole")) { // If this option is enabled in the config
+                System.out.println(ChatColor.translateAlternateColorCodes('&', getConfig().getString("ConsoleLog").replace("%p", p.getName()))); // This message will be sent to the console after removing op
             }
         }
     }
